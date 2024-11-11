@@ -132,6 +132,8 @@ resource "null_resource" "provisioner" {
       "mv /home/ubuntu/envs/gateway/.env ./gateway/.env",
       "git clone git@github.com:servicesconnect/auth.git",
       "mv /home/ubuntu/envs/auth/.env ./auth/.env",
+      "git clone git@github.com:servicesconnect/users.git",
+      "mv /home/ubuntu/envs/users/.env ./users/.env",
       "git clone git@github.com:servicesconnect/cicd.git",
       "mv /home/ubuntu/envs/cicd/.env ./cicd/.env",
       "cd cicd",
