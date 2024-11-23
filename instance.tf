@@ -42,6 +42,20 @@ resource "aws_security_group" "allow_ssh" {
     cidr_blocks = var.ALLOWED_IPS
   }
 
+  ingress {
+    from_port   = 27017
+    to_port     = 27017
+    protocol    = "tcp"
+    cidr_blocks = var.ALLOWED_IPS
+  }
+
+  ingress {
+    from_port   = 5432
+    to_port     = 5432
+    protocol    = "tcp"
+    cidr_blocks = var.ALLOWED_IPS
+  }
+
   egress {
     from_port   = 0
     to_port     = 0
